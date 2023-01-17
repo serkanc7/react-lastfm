@@ -1,10 +1,11 @@
+@import '../../assets/scss/media-query.scss';
+
 .music-card{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 10px;
-    max-width: 700px;
 
     &.light{
         border: 1px solid black;
@@ -14,9 +15,21 @@
     }
 
     &__artist, &__name{
-        width: 200px;
+        width: 150px;
         white-space: nowrap;
         overflow: hidden !important;
         text-overflow: ellipsis;
+
+        @include mq(mobile-xl,max){
+            width: 100px;
+        } 
+    }
+
+    &__img{
+        margin-right: 5px;
+        @include mq(tablet,max){
+            width: 100px;
+            height: 100px;
+        } 
     }
 }

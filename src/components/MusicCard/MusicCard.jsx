@@ -5,7 +5,7 @@ const MusicCard = ({cardData,cardState,theme}) => {
 
   return (
     <div className={`music-card ${theme}`}>
-        <img src={cardData.image[2]["#text"]} alt="" />
+        <img className='music-card__img' src={cardData.image[2]["#text"]} alt="" />
         <div >
             <div className='music-card__name'>{cardData.name}</div>
             <div className='music-card__artist'>{cardData.artist.name}</div>

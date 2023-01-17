@@ -14,7 +14,7 @@ const Detail = () => {
   return (
     <div className='detail'>
         <div className={`detail__card ${theme}`}>
-          <img src="https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png" alt="" />
+          <img className='detail__img' src="https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png" alt="" />
           <h1 className='detail__title'>{id}</h1>
         </div>
         <div className='detail__top-info'>
