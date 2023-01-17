@@ -18,3 +18,23 @@ html, body {
         color: white;
     }
 }
+
+.switch {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.light{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+    &.dark{
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+    }
+}

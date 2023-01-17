@@ -20,6 +20,10 @@
         &.dark{
             border: 1px solid white;
         }
+
+        @include mq(tablet,max){
+            margin-top: 30px;
+        }
     }
 
     &__img{

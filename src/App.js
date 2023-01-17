@@ -20,7 +20,7 @@ function App() {
   return (
     <div className={`app ${theme}`}>
       <BrowserRouter>
-      <button className="switch" onClick={setTheme}>Dark Mode</button>
+      <button className={`switch ${theme}`} onClick={setTheme}>{theme === "light" ? "Dark Mode" : "Light Mode" }</button>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/detail/:id" element={<Detail />} />
