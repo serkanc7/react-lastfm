@@ -1,0 +1,33 @@
+@import '../../assets/scss/media-query.scss';
+
+.detail{
+
+    padding: 50px;
+
+    &__card{
+
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        &.light{
+            border: 1px solid black;
+        }
+        &.dark{
+            border: 1px solid white;
+        }
+    }
+
+    &__title{
+        margin-left: 20px;
+    }
+
+    &__top-info{
+        display: flex;
+        justify-content: center;
+
+        @include mq(tablet,max){
+            flex-direction: column;
+        } 
+    }
+}

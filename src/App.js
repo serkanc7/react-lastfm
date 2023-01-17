@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home/Home";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Detail from "./pages/Detail/Detail";
+import { useDispatch, useSelector } from "react-redux";
+import { changeTheme } from "./store/themeSlice"
 
 function App() {
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.mode);
+  console.log(theme)
+
+  const setTheme = () => {
+    dispatch(changeTheme());
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app ${theme}`}>
+      <BrowserRouter>
+      <button className="switch" onClick={setTheme}>Dark Mode</button>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
